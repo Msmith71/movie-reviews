@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title th:text="'Movie: ' + ${modelAllMovies}" />
+</head>
+<body>
+<p th:text="'this is what the toString looks like: ' + ${modelAllMovies}" />
+
+<p th:text="'Number of movies: ' + ${modelAllMovies.size()}" />
+
+<ul>
+	<li th:each="movie: ${modelAllMovies}" th:text="${movie.name}" />
+</ul>
+
+<!--  if I wanted to create content inside each li -->
+<ul>
+	<li th:each="movie: ${modelAllMovies}">
+		<p th:text="${movie.name}" />
+	</li>
+</ul>
+
+<ul>
+	<li th:each="movie: ${modelAllMovies}" th:text="${movie.name} + ${movie.description}" />
+</ul>
+</body>
+</html>

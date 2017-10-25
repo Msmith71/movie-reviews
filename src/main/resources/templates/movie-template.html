@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title th:text="'Movie: ' + ${modelMovie.name}" />
+</head>
+<body>
+<h1>Movie Reviews</h1>
+
+<img th:src="@{/Bladerunner.jpg}" />
+
+<h2 th:text="${modelMovie.name}" />
+
+<p th:text="${modelMovie.year}"/>
+
+<p th:text="${modelMovie.description}" />
+
+<h2>Director</h2>
+<p th:text="${modelMovie.director}" />
+</body>
+</html>
