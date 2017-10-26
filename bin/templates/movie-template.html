@@ -1,20 +1,52 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<title th:text="'Movie: ' + ${modelMovie.name}" />
+<title>test</title>
 </head>
 <body>
-<h1>Movie Reviews</h1>
+<h1>The Real IMDB Movie Reviews</h1>
 
-<img th:src="@{/Bladerunner.jpg}" />
+<p> Welcome to our review site</p>
 
-<h2 th:text="${modelMovie.name}" />
+<h2>Catagories</h2>
 
-<p th:text="${modelMovie.year}"/>
+<!-- Nav bar for catagory -->
 
-<p th:text="${modelMovie.description}" />
+<div class="catbar">
+	<ul class="nav navbar-nav navbar-right">
+		<li>
+			<a href="#Scifi">Sci/Fi</a>
+		</li>
+		<li>
+			<a href="#Action">Action</a>
+		</li>
+		<li>
+			<a href="#Comedy">Comedy</a>
+		</li>
+		<li>
+			<a href="#Horror">Horror</a>
+		</li>
+		<li>
+			<a href="#Romance">Romance</a>
+		</li>
+	</ul>
+</div> 
+<div class="grid">
+	<h2 id="SciFi" class="SciFi">Science Fiction</h2>
+		<article>
+			<img th:src="@{/Bladerunner.jpg}" />
+			<h2 th:text="${MovieReview.name}" />
+			<p th:text="${modelMovie.year}"/>
+			<p th:text="${modelMovie.description}" />
 
-<h2>Director</h2>
+<h3>Director</h3>
 <p th:text="${modelMovie.director}" />
+	</article>
+
+
+
+
+
+</div>
 </body>
 </html>

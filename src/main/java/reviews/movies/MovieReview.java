@@ -1,11 +1,18 @@
 package reviews.movies;
 
-public class Movie {
+
+public class MovieReview {
 	
 	private String name;
 	private String description;
 	private String year;
 	private String director;
+	private String genre;
+	private Long id;
+	private String imageUrl;
+	
+	
+	
 	
 	public String getName() {
 		return name;
@@ -23,11 +30,26 @@ public class Movie {
 		return director;
 	}
 	
-	public Movie(String name, String description, String year, String director) {
+	public String getGenre() {
+		return genre;
+	}
+	
+	public Long getId() {
+		return id;
+	}
+	
+	public String getImageUrl() {
+		return imageUrl;
+	}
+	
+	public MovieReview(String name, String description, String year, String director, String genre, Long id, String imageUrl) {
 		this.name = name;
 		this.description = description;
 		this.year = year;
 		this.director = director;
+		this.genre = genre;
+		this.id = id;
+		this.imageUrl = imageUrl;
 	}
 	
 	
