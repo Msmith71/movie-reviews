@@ -17,6 +17,10 @@ public class ReviewRepository {
 		MovieReview It = new MovieReview("It", "A group of bullied kids band together when a shapeshifting demon, taking the appearance of a clown, begins hunting children.", "2017", "Andy Muschietti", "Horror",(long) 4562518,"It.jpg");
 		MovieReview DieHard = new MovieReview("Die Hard", "John McClane, officer of the NYPD, tries to save his wife Holly Gennaro and several others that were taken hostage by German terrorist Hans Gruber during a Christmas party at the Nakatomi Plaza in Los Angeles.", "1988", "John McTiernan", "Action", (long) 654813, "DieHard.jpg");
 		MovieReview RomeoJuliet = new MovieReview("Romeo + Juliet", "Shakespeare's famous play is updated to the hip modern suburb of Verona still retaining its original dialogue.", "1996", "Baz Luhrmann", "Romance",(long) 5468188, "RomeoJuliet.jpg");
+		MovieReview StarWars = new MovieReview(null, null, null, null, null, null, null);
+		MovieReview JohnWick =  new MovieReview(null, null, null, null, null, null, null);
+		MovieReview TheShining = new MovieReview(null, null, null, null, null, null, null);
+		MovieReview LoveActually = new MovieReview(null, null, null, null, null, null, null);
 	}
 
 	public Collection<MovieReview> findAll() {
@@ -29,3 +33,4 @@ public class ReviewRepository {
 
 
 }
+ 
