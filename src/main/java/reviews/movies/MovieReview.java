@@ -3,12 +3,12 @@ package reviews.movies;
 
 public class MovieReview {
 	
-	private String name;
+	String name;
 	private String description;
 	private String year;
 	private String director;
 	private String genre;
-	private Long id;
+	Long id;
 	private String imageUrl;
 	
 	

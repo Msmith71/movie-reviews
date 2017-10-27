@@ -14,9 +14,9 @@ public class MovieController {
 	ReviewRepository MovieRepo = new ReviewRepository();
 
 	@RequestMapping("/movie")
-	public String showMovie(@RequestParam("id")Model model, Long id) {
+	public String showMovie(@RequestParam("id")Long id, Model model) {
 		model.addAttribute("modelMovie", MovieRepo.findOne(id));
-		return "movie-review";
+		return "movie-template";
 	}
 	@RequestMapping("/allMovies")
 	public String showAll(Model model) {
