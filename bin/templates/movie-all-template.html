@@ -1,26 +1,45 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<title th:text="'Movie: ' + ${modelAllMovies}" />
+<link rel="stylesheet" type="text/css" href="style.css"></link>
+<title>RIMDB</title>
 </head>
 <body>
-<p th:text="'this is what the toString looks like: ' + ${modelAllMovies}" />
+<div class="grid">
 
-<p th:text="'Number of movies: ' + ${modelAllMovies.size()}" />
+<h1>The Real IMDB Movie Reviews</h1>
 
-<ul>
-	<li th:each="movie: ${modelAllMovies}" th:text="${movie.name}" />
-</ul>
+<p> Welcome to our review site</p>
 
-<!--  if I wanted to create content inside each li -->
-<ul>
-	<li th:each="movie: ${modelAllMovies}">
-		<p th:text="${movie.name}" />
-	</li>
-</ul>
+<h2>Catagories</h2>
 
-<ul>
-	<li th:each="movie: ${modelAllMovies}" th:text="${movie.name} + ${movie.description}" />
-</ul>
+<!-- Nav bar for catagory -->
+<div class="catbar">
+	<ul class="nav navbar-nav navbar-right">
+		<li>
+			<a href="#Scifi">Sci Fi</a>
+		</li>
+		<li>
+			<a href="#Action">Action</a>
+		</li>
+		<li>
+			<a href="#Comedy">Comedy</a>
+		</li>
+		<li>
+			<a href="#Horror">Horror</a>
+		</li>
+		<li>
+			<a href="#Romance">Romance</a>
+		</li>
+	</ul>
+</div> 
+
+<!-- Reviews -->
+
+	<div th:each="allMovies: ${modelAllMovies}">
+		<h1><a th:href="@{/movie(id=${allMovies.id})}" th:text="${allMovies.title}"></a></h1>
+		<p th:text="${allMovies.content}"> </p>
+		<img th:src="${allMovies.imageURL}"/>
+	</div>
 </body>
 </html>

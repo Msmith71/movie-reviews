@@ -10,6 +10,7 @@ public class MovieReview {
 	private String genre;
 	Long id;
 	private String imageUrl;
+	private String review;
 	
 	
 	
@@ -42,7 +43,11 @@ public class MovieReview {
 		return imageUrl;
 	}
 	
-	public MovieReview(String name, String description, String year, String director, String genre, Long id, String imageUrl) {
+	public String getReview() {
+		return review;
+	}
+	
+	public MovieReview(String name, String description, String year, String director, String genre, Long id, String imageUrl, String review) {
 		this.name = name;
 		this.description = description;
 		this.year = year;
@@ -50,6 +55,7 @@ public class MovieReview {
 		this.genre = genre;
 		this.id = id;
 		this.imageUrl = imageUrl;
+		this.review = review;
 	}
 	
 	

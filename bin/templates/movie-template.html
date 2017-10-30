@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <link rel="stylesheet" type="text/css" href="style.css"></link>
-<title>test</title>
+<title>Blade Runner</title>
 </head>
 <body>
 
@@ -32,7 +32,7 @@
 			<a href="#Romance">Romance</a>
 		</li>
 		<li>
-			<a href="#Romance">All</a>
+			<a href="http://localhost:8080/movie?id=2468544">All</a>
 		</li>
 	</ul>
 </div> 
@@ -62,15 +62,7 @@
 </div>
 
 <!-- Main Review -->
-<p class="mainreview">It's been so long now since Ridley Scott's sci-fi thriller Blade Runner was first released (1982) that the futuristic setting  2019  no longer seems far off.
-The best version to see is Blade Runner: The Final Cut  as the perfectionist director's definitive cut is called which is bleaker than the original but a more wonderfully immersive and true film.
-The film is based on Philip K Dick's 1968 novel Do Androids Dream of Electric Sheep?, and is set in Los Angeles. The 'hero' is a detective called Deckard (expertly played by Harrison Ford), who hunts down androids  in the film they are called replicants  who have escaped from their slave jails on outer-space colonies and are trying to blend in back on Earth. Rutger Hauer's android Roy Batty is one of the most dangerous, yet appealing, 'monsters' in cinema.
-There are some people who prefer the original's gritty Chandleresque voice-over narration and the ambiguous happy ending (both supposedly forced on Scott), but the Final Cut is a more disturbing tale of dehumanisation.
-Blade Runner was first released in 1982 Scott had wanted to film Blade Runner in Hong Kong but it was too expensive, so the bustling city and sky neon-lit by huge corporate logos and video billboards were shot mainly on Warner Brothers' back lot in Burbank, California, with the smoke pumped in and drizzling rain manufactured.
-Scott designed this world in tiny detail and shot it at night. He told the New York Times once: "I'sve never paid quite so much attention to a movie, ever. But we had to create a world that supported the story's premise, made it believable. Why do you watch a film seven times? Because somebody's done it right and transported you to its world.""
-Telegraph Film Critic Tim Robey, who included Blade Runner in his list of the 10 best sci-fi films of all time, has described the film as "an extraordinary feat of cyberpunk design, wrapped around an equally extraordinary premise about replicants raging against the dying of the light. Harrison Ford's Deckard could easily be one of them  witness his unicorn dream in the Director's Cut."
-In February 2015, it was announced that Ford will return to star in a sequel to Blade Runner directed by Denis Villeneuve.
-Blade Runner: The Final Cut is a masterpiece of dystopian science fiction on film.</p>
+<p class="mainreview" th:text="${modelMovie.review}" />
 </div>
 </body>
 </html>
