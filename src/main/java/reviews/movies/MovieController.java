@@ -21,6 +21,6 @@ public class MovieController {
 	@RequestMapping("/allMovies")
 	public String showAll(Model model) {
 		model.addAttribute("modelAllMovies", MovieRepo.findAll());
-		return "movie-all-reviews";
+		return "movie-all-template";
 	}
 }

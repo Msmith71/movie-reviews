@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <link rel="stylesheet" type="text/css" href="style.css"></link>
-<title>Blade Runner</title>
+<title th:text="${modelMovie.name}"></title>
 </head>
 <body>
 
@@ -17,29 +17,29 @@
 <div class="catbar">
 	<ul class="nav navbar-nav navbar-right">
 		<li>
-			<a href="#Scifi">Sci Fi</a>
+			<a href="http://localhost:8080/movie?id=1684684">Blade Runner</a>
 		</li>
 		<li>
-			<a href="#Action">Action</a>
+			<a href="http://localhost:8080/movie?id=654813">Die Hard</a>
 		</li>
 		<li>
-			<a href="#Comedy">Comedy</a>
+			<a href="http://localhost:8080/movie?id=9943177">John Wick</a>
 		</li>
 		<li>
-			<a href="#Horror">Horror</a>
+			<a href="http://localhost:8080/movie?id=4562518">It</a>
 		</li>
 		<li>
-			<a href="#Romance">Romance</a>
+			<a href="http://localhost:8080/movie?id=5468188">Romeo + Juliet</a>
 		</li>
 		<li>
-			<a href="http://localhost:8080/movie?id=2468544">All</a>
+			<a href="http://localhost:8080/movie?id=2468544">Hot Fuzz</a>
 		</li>
 	</ul>
 </div> 
 
 <!-- Review -->
 
-<p class="movietitle" th:text="${modelMovie.getName()}"/>
+<p class="movietitle" th:text="${modelMovie.name}"/>
 <img class="movieimage" th:src="${modelMovie.imageUrl}" />
 
 <section class="reviewinfo">
@@ -50,16 +50,6 @@
 		<p th:text="${modelMovie.description}" />
 		<p th:text="${modelMovie.genre}" />
 </section>
-
-<div id="slider">
-	<figure>
-		<img src="1.jpg" />
-		<img src="2.jpg" />
-		<img src="3.jpg" />
-		<img src="4.jpg" />
-		<img src="1.jpg" />
-	</figure>
-</div>
 
 <!-- Main Review -->
 <p class="mainreview" th:text="${modelMovie.review}" />

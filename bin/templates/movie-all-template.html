@@ -11,35 +11,26 @@
 
 <p> Welcome to our review site</p>
 
-<h2>Catagories</h2>
-
-<!-- Nav bar for catagory -->
-<div class="catbar">
-	<ul class="nav navbar-nav navbar-right">
-		<li>
-			<a href="#Scifi">Sci Fi</a>
-		</li>
-		<li>
-			<a href="#Action">Action</a>
-		</li>
-		<li>
-			<a href="#Comedy">Comedy</a>
-		</li>
-		<li>
-			<a href="#Horror">Horror</a>
-		</li>
-		<li>
-			<a href="#Romance">Romance</a>
-		</li>
-	</ul>
-</div> 
 
 <!-- Reviews -->
 
 	<div th:each="allMovies: ${modelAllMovies}">
-		<h1><a th:href="@{/movie(id=${allMovies.id})}" th:text="${allMovies.title}"></a></h1>
-		<p th:text="${allMovies.content}"> </p>
-		<img th:src="${allMovies.imageURL}"/>
+		<h2 th:text="${allMovies.name}"></h2>
+		
+		<section class="reviewinfo">
+			<img th:src="${allMovies.imageUrl}"/>
+			<p th:text="${allMovies.year}" />
+		<h3>Director</h3>
+			<p th:text="${allMovies.director}" />
+		<h3>Synopsis</h3>
+			<p th:text="${allMovies.description}" />
+			<p th:text="${allMovies.genre}" />
+		</section>
+		<section>
+<!-- Main Review -->
+			<p class="mainreview" th:text="${allMovies.review}" />
+		</section>
 	</div>
+</div>
 </body>
 </html>
